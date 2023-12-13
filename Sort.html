@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("Sorting Number<br>");
+        document.write("**************<br>");
+        var array=[23,45,22,1,89,0];
+        for(var i=0;i<array.length;i++)
+        {
+            for(var j=i+1;j<array.length;j++)
+            {
+                if(array[i]<array[j])
+                {
+                    var temp=array[i];
+                    array[i]=array[j];
+                    array[j]=temp;
+                }
+                
+            }
+        }
+        for(var i=0;i<array.length;i++)
+        {
+            document.write(array[i]+" ");
+        }
+    </script>
+</body>
+</html>

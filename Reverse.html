@@ -1,0 +1,37 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse string</title>
+</head>
+<body>
+    <script>
+        function reverseWord(word) {
+    var reversed = '';
+    
+    for (var i = word.length - 1; i >= 0; i--) {
+        reversed += word[i];
+    }
+    
+    return reversed;
+}
+
+function reverseStringWords(inputString) {
+    var words = inputString.split(' ');
+    var reversedWords = [];
+
+    for (var i = 0; i < words.length; i++) {
+        reversedWords.push(reverseWord(words[i]));
+    }
+
+    return reversedWords.join(' ');
+}
+var originalString = prompt("Enter the String :");
+var reversedString = reverseStringWords(originalString);
+document.write("Original string: " + originalString+"<br>");
+document.write("Reversed string: " + reversedString);
+
+    </script>
+</body>
+</html>
